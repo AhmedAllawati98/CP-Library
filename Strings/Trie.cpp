@@ -3,6 +3,8 @@ using namespace std;
 typedef long long int ll;
 const int N = 1e5 + 9;
 
+// dont forget to do trie.push_back(node()) before start 
+
 int n,q;
 struct node {
     int ch[26];
