@@ -3,10 +3,8 @@ using namespace std;
 typedef long long int ll;
 const int N = 2e5 + 9;
 
-int n;
-
 vector<int> pfact[N];
-void method1(){ // you will just know the prime factor withot frequncy 
+void f1(){ // you will just know the prime factor withot frequncy 
     for(int i = 2; i < N;i++){
         if(pfact[i].size() == 0){ // its mean this is prime 
             for(int j = i;j < N; j += i){
@@ -16,15 +14,15 @@ void method1(){ // you will just know the prime factor withot frequncy
     }
 }
 
-void method2(){
+void f(int x){
    vector<int>v;
-   for(int i=2;i*i<=n;i++){ 
-       while(n%i==0){ 
+   for(int i=2;i*i<=x;i++){ 
+       while(x%i==0){ 
            v.push_back(i);
-           n=n/i;
+           x=x/i;
        }
    } 
-   if(n>1)v.push_back(n);
+   if(x>1)v.push_back(x);
 }
 
 int main() {
